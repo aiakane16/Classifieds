@@ -13,6 +13,3 @@ USER gitpod
 
 # Give back control
 USER root
-
-RUN systemctl start mysql
-RUN sudo systemctl enable mysql
