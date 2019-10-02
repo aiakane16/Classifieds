@@ -13,3 +13,5 @@ USER gitpod
 
 # Give back control
 USER root
+
+CMD service mysql start
