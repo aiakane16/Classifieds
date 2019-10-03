@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ea2d5630a04fc0a863690546b1dcef30",
+    "content-hash": "50fd59f59fd6f4061998d9531e0e1081",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -3524,6 +3524,54 @@
                 "fixtures"
             ],
             "time": "2018-07-12T10:23:15+00:00"
+        },
+        {
+            "name": "guidocella/eloquent-populator",
+            "version": "v2.1.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guidocella/eloquent-populator.git",
+                "reference": "4f049b8fbb99aa1c7751a70442bb9ed860b8a69e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guidocella/eloquent-populator/zipball/4f049b8fbb99aa1c7751a70442bb9ed860b8a69e",
+                "reference": "4f049b8fbb99aa1c7751a70442bb9ed860b8a69e",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": "^2.5",
+                "fzaninotto/faker": "^1.4",
+                "illuminate/database": "^5.3||^6",
+                "php": ">=5.6.4"
+            },
+            "require-dev": {
+                "dimsav/laravel-translatable": "^6",
+                "laravel/laravel": "^6",
+                "phpunit/phpunit": "^8",
+                "themsaid/laravel-multilingual": "^1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "EloquentPopulator\\": "src"
+                },
+                "files": [
+                    "src/helper.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Automatically populate Eloquent models",
+            "keywords": [
+                "database",
+                "eloquent",
+                "faker",
+                "laravel"
+            ],
+            "time": "2019-09-03T14:33:44+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
