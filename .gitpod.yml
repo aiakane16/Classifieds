@@ -3,4 +3,4 @@ image:
 tasks:
   - before: mysql -u root -e "create database laravel";
     init: composer install
-    command: php artisan key:generate
+    command: php -r "copy('.env.example','.env');" && php artisan key:generate
