@@ -8,7 +8,7 @@ RUN cd /tmp
 
 # Install depot_tools first (needed for source checkout)
 RUN git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
-RUN export PATH=`pwd`/depot_tools:"$PATH"
+RUN export PATH=/tmp/depot_tools:"$PATH"
 
 # Download v8
 RUN fetch v8
