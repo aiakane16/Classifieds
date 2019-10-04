@@ -4,7 +4,7 @@ USER root
 
 ENV TAR_OPTIONS=--no-same-owner
 
-RUN apt-get install -y \
+RUN apt-get upgrade && apt-get update && apt-get install -y \
         beanstalkd \
         graphviz \
         php7.2-bcmath \
