@@ -2,6 +2,8 @@ FROM gitpod/workspace-mysql:latest
 
 USER root
 
+ENV TAR_OPTIONS=--no-same-owner
+
 RUN cd /tmp && \
     git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git && \
     export PATH=`pwd`/depot_tools:"$PATH" && \
