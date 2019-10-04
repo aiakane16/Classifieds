@@ -4,7 +4,7 @@ USER root
 
 RUN apt-get update -y &&\
     apt-get upgrade -y &&\
-    apt-get install python-software-properties &&\
+    apt-get install software-properties-common &&\
     add-apt-repository -y ppa:ondrej/php && \
     add-apt-repository -y ppa:pinepain/libv8-archived -y && \
     apt-get update -y && \
