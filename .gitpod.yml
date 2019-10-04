@@ -1,6 +1,6 @@
 image:
   file: .gitpod.dockerfile
 tasks:
-  - before: mysql -u root -e "create database laravel";
-    init: composer install
+  - init: mysql -u root -e "create database laravel";
+  - before: composer install
     command: php -r "copy('.env.example','.env');" && php artisan key:generate
