@@ -2,9 +2,9 @@ FROM gitpod/workspace-mysql:latest
 
 USER root
 
-RUN apt update && \
-    apt upgrade && \
-    apt-get install build-essential curl git python libglib2.0-dev && \
+RUN apt update -y && \
+    apt upgrade -y && \
+    apt-get install build-essential curl git python libglib2.0-dev -y && \
     cd /tmp && \
     git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git && \
     export PATH=`pwd`/depot_tools:"$PATH" && \
@@ -28,12 +28,12 @@ RUN cd /usr/local/src && \
     make test  && \
     sudo make install
 
-RUN apt update &&\
-    apt upgrade &&\
-    apt-get install python-software-propertiesadd-apt-repository -y ppa:ondrej/php && \
-    add-apt-repository -y ppa:pinepain/libv8-archived && \
-    apt update && \
-    apt-get install php7.2 php7.2-curl php7.2-dev php7.2-mbstring php7.2-zip php7.2-mysql
+RUN apt update -y &&\
+    apt upgrade -y &&\
+    apt-get install python-software-propertiesadd-apt-repository -y ppa:ondrej/php -y && \
+    add-apt-repository -y ppa:pinepain/libv8-archived -y && \
+    apt update -y && \
+    apt-get install php7.2 php7.2-curl php7.2-dev php7.2-mbstring php7.2-zip php7.2-mysql -y
 
 # Install custom tools, runtime, etc.
 RUN apt-get install -y \
