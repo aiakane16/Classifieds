@@ -15,7 +15,6 @@ class AppController extends Controller
     }
 
     public function initial(){
-        dd(ssr('js/app-server.js')->fallback('<div id="app"></div>')->render());
 
         return $this->response->view('home');
     }

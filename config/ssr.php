@@ -4,7 +4,7 @@ return [
     /*
      * Enable or disable the server renderer. Enabled in production by default.
      */
-    'enabled' => env('APP_ENV') === 'production',
+    'enabled' => true,
 
     /*
      * When server side rendering goes wrong, nothing will be rendered so the
@@ -25,7 +25,7 @@ return [
      * up some extra configuration below. If you want to use the V8 engine, make
      * sure the v8js php extension is available.
      */
-    'engine' => \Spatie\Ssr\Engines\V8::class,
+    'engine' => \Spatie\Ssr\Engines\Node::class,
 
     /*
      * Extra setup for the Node engine.
