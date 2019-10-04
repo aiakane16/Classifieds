@@ -2,7 +2,7 @@ image:
   file: .gitpod.dockerfile
 tasks:
   - init: mysql -u root -e "create database laravel";
-  - init: composer install && php -r "copy('.env.example','.env');" && php artisan key:generate && php artisan migrate && php artisan db:seed
+  - init: composer install && php -r "copy('.env.example','.env');" && php artisan key:generate && php artisan migrate && php artisan db:seed && export PATH=/workspace/Classifieds/vendor/bin:$PATH
     command: php artisan serve --host=0.0.0.0
 ports:
   - port: 8000
