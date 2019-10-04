@@ -2,16 +2,17 @@ FROM gitpod/workspace-mysql:latest
 
 USER root
 
-RUN apt-get update -y &&\
-    apt-get upgrade -y &&\
-    apt-get install software-properties-common &&\
-    add-apt-repository -y ppa:ondrej/php && \
-    add-apt-repository -y ppa:pinepain/libv8-archived -y && \
-    apt-get update -y && \
-    apt-get install php7.2 php7.2-curl php7.2-dev php7.2-mbstring php7.2-zip php7.2-mysql && \
-    pecl install v8js && \
-    echo 'extension=v8js.so' >> /etc/php/7.2/cli/conf.d/20-v8js.ini && \
-    php -i | grep v8js
+RUN apt-get install build-essential curl git python libglib2.0-dev
+
+RUN cd /tmp
+
+# Install depot_tools first (needed for source checkout)
+RUN git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
+RUN export PATH=`pwd`/depot_tools:"$PATH"
+
+# Download v8
+RUN fetch v8
+RUN cd v8
 
 # Install custom tools, runtime, etc.
 RUN apt-get install -y \
