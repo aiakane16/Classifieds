@@ -4,3 +4,6 @@ tasks:
   - init: mysql -u root -e "create database laravel";
   - init: composer install && php -r "copy('.env.example','.env');" && php artisan key:generate
     command: php artisan serve --host=0.0.0.0
+ports:
+  - port: 8000
+  - port: 3306
