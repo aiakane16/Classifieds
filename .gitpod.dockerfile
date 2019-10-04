@@ -2,17 +2,12 @@ FROM gitpod/workspace-mysql:latest
 
 USER root
 
-RUN apt-get install build-essential curl git python libglib2.0-dev
-
-RUN cd /tmp
-
-# Install depot_tools first (needed for source checkout)
-RUN git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
-RUN export PATH=/tmp/depot_tools:"$PATH"
-
-# Download v8
-RUN fetch v8
-RUN cd v8
+RUN apt-get install build-essential curl git python libglib2.0-dev && \
+        cd /tmp && \
+        git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git && \
+        export PATH=/tmp/depot_tools:"$PATH" && \
+        fetch v8 && \
+        cd v8
 
 # Install custom tools, runtime, etc.
 RUN apt-get install -y \
