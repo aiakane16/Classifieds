@@ -11,13 +11,16 @@
         "php": "^7.2",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.0",
-        "laravel/tinker": "^1.0"
+        "laravel/tinker": "^1.0",
+        "spatie/laravel-server-side-rendering": "^1.2",
+        "spatie/server-side-rendering": "^0.2.5"
     },
     "require-dev": {
         "beyondcode/laravel-er-diagram-generator": "dev-master",
         "facade/ignition": "^1.4",
         "fzaninotto/faker": "^1.4",
         "guidocella/eloquent-populator": "^2.1",
+        "laravel/ui": "^1.0",
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^3.0",
         "phpunit/phpunit": "^8.0"
