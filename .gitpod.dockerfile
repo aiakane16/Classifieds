@@ -7,7 +7,8 @@ RUN apt-get install build-essential curl git python libglib2.0-dev && \
         git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git && \
         export PATH=/tmp/depot_tools:"$PATH" && \
         fetch v8 && \
-        cd v8
+        cd v8 && \
+        gclient sync
 
 # Install custom tools, runtime, etc.
 RUN apt-get install -y \
